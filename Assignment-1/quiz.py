@@ -45,7 +45,7 @@ for q in quiz:
 
     user_answer = input("Enter your answer (A/B/C/D): ").lower()
     
-
+# Added input validation
     choice = ['a','b','c','d']
     if user_answer not in choice:
         print("Invalid option")  
@@ -65,7 +65,7 @@ def calculate_result(score, total_questions):
     
 
     if percentage >= 50:
-        print("You passed the quiz!")
+        print("You passed the quiz!!")
     else:
         print("You failed the quiz. Try again!")
 
