@@ -1,0 +1,20 @@
+START PROGRAM
+
+create queue for incoming applications
+create stack for processed applications
+
+collect messy startup names
+
+FOR each startup name:
+    clean the text (strip spaces, lowercase)
+    add cleaned name to queue
+
+WHILE queue is not empty:
+    remove first startup from queue
+    approve/process startup
+    add startup to stack (history)
+
+IF undo is needed:
+    remove last processed startup from stack
+
+END PROGRAM
