@@ -9,8 +9,17 @@
         {% for option in question.options %}
             <input type="radio" name="answer" value="{{ loop.index0|add:'a' }}" required> {{ option }} <br>
         {% endfor %}
+        
         <input type="hidden" name="index" value="{{ index }}">
         <button type="submit">Next</button>
     </form>
+        <button type="submit">Next</button>
+    </form>
+
+    <form method="POST" action="{{ url_for('undo') }}">
+        <input type="hidden" name="index" value="{{ index }}">
+        <button type="submit">Undo Last Answer</button>
+    </form>
+
 </body>
 </html>

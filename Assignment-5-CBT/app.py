@@ -36,6 +36,17 @@ def result():
     finished_at = datetime.now()
     return render_template("result.html", score=score, total=len(quiz_questions), timestamp=finished_at)
 
+# adding undo features
+@app.route('/undo', methods=['POST'])
+def undo():
+    if user_answers:
+        user_answers.pop()  # Remove the last answer (LIFO)
+    # Go back to the previous question
+    prev_index = int(request.form.get('index')) - 1
+    if prev_index < 0:
+        prev_index = 0
+    return redirect(url_for('quiz', q=prev_index))
+
 
 if __name__ == "__main__":
     app.run(debug=True)
