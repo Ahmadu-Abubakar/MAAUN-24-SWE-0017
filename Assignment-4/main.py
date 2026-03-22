@@ -62,9 +62,12 @@ def binary_search(arr, target):
 
 
 # Asking user for a target
-target = int(input("Enter score to search: "))
+try:
+    target = int(input("Enter score to search: "))
+    index = binary_search(sorted_scores, target)
+except ValueError as e:
+    print(e)
 
-index = binary_search(sorted_scores, target)
 
 
 # printing search result
