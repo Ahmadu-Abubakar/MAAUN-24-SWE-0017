@@ -12,13 +12,13 @@ for data in messy_data:
     clean_data = data.strip().lower()
     income_application.append(clean_data)
 
-# process applications (FIFO)
+# process applications (FIFO) Queue
 while income_application:
     first = income_application.popleft()
     print("Processing:", first)
     processed_application.append(first)
 
-# undo last action (LIFO)
+# undo last action (LIFO) Stack
 if processed_application:
     undo = processed_application.pop()
     print("Undo last processed:", undo)
