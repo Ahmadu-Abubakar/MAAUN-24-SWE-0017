@@ -1,3 +1,8 @@
+from datetime import datetime
+
+# finishing time
+finished_at = datetime.now()
+
 # Questions object
 class Question:
     def __init__(self, text, options, correct_answer):
@@ -9,3 +14,4 @@ class Question:
         return user_answer.lower() == self.correct_answer.lower()
 # answer(stack)
 user_answer = []
+
