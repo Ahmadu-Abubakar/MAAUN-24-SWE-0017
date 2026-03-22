@@ -1,9 +1,5 @@
-from datetime import datetime
+# models.py
 
-# finishing time
-finished_at = datetime.now()
-
-# Questions object
 class Question:
     def __init__(self, text, options, correct_answer):
         self.text = text
@@ -12,10 +8,7 @@ class Question:
 
     def check_answer(self, user_answer):
         return user_answer.lower() == self.correct_answer.lower()
-# answer(stack)
-user_answer = []
 
-from models import Question
 
 # Example questions
 quiz_questions = [
