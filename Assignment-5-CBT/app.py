@@ -31,7 +31,7 @@ def quiz():
     index = int(request.args.get('q', 0))
     question = quiz_questions[index]
     return render_template("index.html", question=question, index=index)
-
+# Undo 
 @app.route('/undo', methods=['POST'])
 def undo():
     # Remove last answer from stack
