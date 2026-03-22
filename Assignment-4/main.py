@@ -65,3 +65,12 @@ def binary_search(arr, target):
 target = int(input("Enter score to search: "))
 
 index = binary_search(sorted_scores, target)
+
+
+# printing search result
+index = binary_search(sorted_scores, target)
+
+if index != -1:
+    print("Score found at index:", index)
+else:
+    print("Score not found.")
